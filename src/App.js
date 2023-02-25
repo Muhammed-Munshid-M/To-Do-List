@@ -1,6 +1,3 @@
-// import Employee from './Employee'
-// import Counter from './compnents/Counter';
-// import Counter from "./Counter";
 import './App.css'
 import { useState } from 'react'
 
@@ -28,7 +25,6 @@ function App() {
                 <div className="left">
                   <input onChange={(e)=>{
                     console.log(e.target.checked);
-                    console.log(obj);
                     setTodos(toDos.filter(obj2=>{
                       if (obj2.id===obj.id) {
                         obj2.status=e.target.value
@@ -55,37 +51,6 @@ function App() {
       </div>
     </div>
   )
-  // const [state,setState] = useState(false)
-  // return (
-  //   <div className="App">
-  //   <h1 onClick={()=>setState(!state)}>Show/Hide</h1>
-  //   { state && <Counter/>}
-  // </div>
-  //   );
-  // const [count,setCount] = useState(0)
-  // const addCount=()=> {
-  //   setCount(count + 1)
-  // }
-  // let obj = {
-  //   title:'1st Counter',
-  //   count,
-  //   place:'hello'
-  // }
-  // let emp = [{name:'Munshid',age:21},{name:'NK',age:20},{name:'Musk',age:25}]
-  // return (
-  //   <div className="App">
-  //     <button onClick={addCount}>Add</button>
-  //     {
-  //       emp.map((obj,index)=>
-  //          (
-  //           <Employee key={index} {...obj} />
-  //         )
-  //       )
-  //     }
-  //     <Counter {...obj}/>
-  //     <Counter title='2nd Counter' count={count}/>
-  //   </div>
-  // );
 }
 
 export default App;
